@@ -34,3 +34,15 @@
   --font-Ubuntu-Medium: Ubuntu-Medium;
   --font-Ubuntu-Regular: Ubuntu-Regular;
 }
+
+.form-label {
+  @apply flex flex-col gap-1
+}
+
+.form-span {
+  @apply text-Blue-950 font-Ubuntu-Medium text-xs
+}
+
+.form-input {
+  @apply border-2 border-Purple-200 p-1 rounded-md pl-3 placeholder:text-Grey-500 placeholder:text-sm placeholder:font-Ubuntu-Medium
+}
