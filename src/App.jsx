@@ -1,5 +1,6 @@
 import { Layout } from "./Layou"
 import { StepOne } from "./pages/StepOne"
+import { StepThree } from "./pages/StepThree"
 import { StepTwo } from "./pages/StepTwo"
 
 
@@ -8,7 +9,8 @@ function App() {
     <>
       <Layout>
         {/* <StepOne /> */}
-        <StepTwo />
+        {/* <StepTwo /> */}
+        <StepThree />
       </Layout>
 
     </>

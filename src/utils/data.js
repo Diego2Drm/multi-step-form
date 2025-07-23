@@ -51,7 +51,6 @@ export const monthlyPlans = [
   },
 ]
 
-
 export const yearlyPlans = [
   {
     icon: iconArcade,
@@ -68,4 +67,16 @@ export const yearlyPlans = [
     title: "Pro",
     price: "$150/yr"
   },
+]
+
+export const addOnsMonthly = [
+  { title: "Online service", text: "Access to multiplayer games", price: 1 },
+  { title: "Large Storage", text: "Extra 1TB of cloud save", price: 2 },
+  { title: "Customizable profile", text: "Custom theme on your profile", price: 2 },
+]
+
+export const addOnsYearly = [
+  { title: "Online service", text: "Access to multiplayer games", price: 10 },
+  { title: "Large Storage", text: "Extra 1TB of cloud save", price: 20 },
+  { title: "Customizable profile", text: "Custom theme on your profile", price: 20 },
 ]
