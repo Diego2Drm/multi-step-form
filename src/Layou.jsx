@@ -5,7 +5,7 @@ import { steps } from "./utils/data";
 const Layout = ({ children }) => {
 
   return (
-    <section>
+    <section className="min-h-full relative">
       <img src={bgSidebarMobile} alt="bg-sidebar-mobile"
         className="absolute -z-10"
       />

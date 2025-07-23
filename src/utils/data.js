@@ -1,3 +1,7 @@
+import iconArcade from "../assets/images/icon-arcade.svg"
+import iconAdvanced from "../assets/images/icon-advanced.svg"
+import iconPro from "../assets/images/icon-pro.svg"
+
 export const steps = [
   { to: "/step-one", step: 1, },
   { to: "/step-two", step: 2, },
@@ -26,5 +30,42 @@ export const formData = [
     type: "text",
     placeholder: "e.g. +1234567890",
     id: "number"
+  },
+]
+
+export const monthlyPlans = [
+  {
+    icon: iconArcade,
+    title: "Arcade",
+    price: "$9/mo"
+  },
+  {
+    icon: iconAdvanced,
+    title: "Advanced",
+    price: "$12/mo"
+  },
+  {
+    icon: iconPro,
+    title: "Pro",
+    price: "$15/mo"
+  },
+]
+
+
+export const yearlyPlans = [
+  {
+    icon: iconArcade,
+    title: "Arcade",
+    price: "$90/yr"
+  },
+  {
+    icon: iconAdvanced,
+    title: "Advanced",
+    price: "$120/yr"
+  },
+  {
+    icon: iconPro,
+    title: "Pro",
+    price: "$150/yr"
   },
 ]

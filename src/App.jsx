@@ -1,12 +1,14 @@
 import { Layout } from "./Layou"
-import { StepOne } from "./StepOne"
+import { StepOne } from "./pages/StepOne"
+import { StepTwo } from "./pages/StepTwo"
 
 
 function App() {
   return (
     <>
       <Layout>
-        <StepOne />
+        {/* <StepOne /> */}
+        <StepTwo />
       </Layout>
 
     </>
