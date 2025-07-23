@@ -1,16 +1,17 @@
 import { Layout } from "./Layou"
-import { StepOne } from "./pages/StepOne"
-import { StepThree } from "./pages/StepThree"
-import { StepTwo } from "./pages/StepTwo"
+import { StepOnePage } from "./pages/StepOnePage"
+import { StepThreePage } from "./pages/StepThreePage"
+import { StepTwoPage } from "./pages/StepTwoPage"
+
 
 
 function App() {
   return (
     <>
       <Layout>
-        {/* <StepOne /> */}
-        {/* <StepTwo /> */}
-        <StepThree />
+        {/* <StepOnePage /> */}
+        {/* <StepTwoPage /> */}
+        <StepThreePage />
       </Layout>
 
     </>

@@ -2,7 +2,7 @@ import React from "react";
 import { formData } from "../utils/data";
 import { Button } from "../utils/Button";
 
-const StepOne = () => {
+const StepOnePage = () => {
 
   return (
     <>
@@ -35,4 +35,4 @@ const StepOne = () => {
   )
 };
 
-export { StepOne };
+export { StepOnePage };

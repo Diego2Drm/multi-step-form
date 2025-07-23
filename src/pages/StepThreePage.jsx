@@ -2,7 +2,7 @@ import React from "react";
 import { StepThreeMonthly } from "../components/StepThree/StepThreeMonthly";
 import { StepThreeYearly } from "../components/StepThree/StepThreeYearly";
 
-const StepThree = () => {
+const StepThreePage = () => {
 
   return (
     <section className="step-secction">
@@ -19,4 +19,4 @@ const StepThree = () => {
   )
 };
 
-export { StepThree };
+export { StepThreePage };

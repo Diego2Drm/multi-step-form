@@ -3,7 +3,7 @@ import { StepMonthly } from "../components/StepTwo/StepMonthly";
 import { StepYeraly } from "../components/StepTwo/StepYearly";
 import { ChengePlan } from "../components/StepTwo/ChangePlan";
 
-const StepTwo = () => {
+const StepTwoPage = () => {
   const [plan, setPlan] = useState(false);
 
   return (
@@ -32,4 +32,4 @@ const StepTwo = () => {
   )
 };
 
-export { StepTwo };
+export { StepTwoPage };
