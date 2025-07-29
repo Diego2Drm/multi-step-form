@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { StepMonthly } from "../components/StepTwo/StepMonthly";
 import { StepYeraly } from "../components/StepTwo/StepYearly";
 import { ChengePlan } from "../components/StepTwo/ChangePlan";
@@ -23,10 +24,10 @@ const StepTwoPage = () => {
       </section >
 
       <div className="bg-white absolute left-0 bottom-0 w-full h-14 flex justify-between items-center px-5 md:relative md:bottom-10">
-        <p className="text-Grey-500 text-xs font-Ubuntu-Medium">Go Back</p>
-        <button className="bg-Blue-950 text-Blue-100 p-2 text-xs rounded-sm">
+        <Link to="/" className="text-Grey-500 text-xs font-Ubuntu-Medium">Go Back</Link>
+        <Link to="/step-three" className="bg-Blue-950 text-Blue-100 p-2 text-xs rounded-sm">
           Next Step
-        </button>
+        </Link>
       </div>
     </>
   )

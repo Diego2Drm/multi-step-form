@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import iconThankYou from "../assets/images/icon-thank-you.svg"
+
 const StepFivePage = () => {
   return (
     <section className="bg-white mt-7 px-4 rounded-xl shadow-md pb-20 md:shadow-none">
@@ -15,6 +17,11 @@ const StepFivePage = () => {
         </p>
       </div>
 
+      <div className="bg-white absolute left-0 -bottom-32 w-full h-14 flex justify-between items-center px-5 md:relative md:-bottom-16">
+        <Link to="/" className="bg-Purple-600 text-Blue-100 py-2 px-5 text-xs rounded-sm">
+         Back Step 1
+        </Link>
+      </div>
     </section>
   )
 };
