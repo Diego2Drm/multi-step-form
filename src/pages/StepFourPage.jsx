@@ -12,8 +12,8 @@ const StepFourPage = () => {
         <p className="step-secction-text">
           Double-check everything looks OK before confirming.
         </p>
-        {/* <FinishingMonthly /> */}
-        <FinishingYearly />
+        <FinishingMonthly />
+        {/* <FinishingYearly /> */}
 
       </section>
 
