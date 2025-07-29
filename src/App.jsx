@@ -1,9 +1,9 @@
 import { Layout } from "./Layou"
-import { StepFivePage } from "./pages/StepFivePage"
-import { StepFourPage } from "./pages/StepFourPage"
 import { StepOnePage } from "./pages/StepOnePage"
-import { StepThreePage } from "./pages/StepThreePage"
 import { StepTwoPage } from "./pages/StepTwoPage"
+import { StepThreePage } from "./pages/StepThreePage"
+import { StepFourPage } from "./pages/StepFourPage"
+import { StepFivePage } from "./pages/StepFivePage"
 
 
 
@@ -11,11 +11,11 @@ function App() {
   return (
     <>
       <Layout>
-        {/* <StepOnePage /> */}
+        <StepOnePage />
         {/* <StepTwoPage /> */}
         {/* <StepThreePage /> */}
         {/* <StepFourPage /> */}
-        <StepFivePage />
+        {/* <StepFivePage /> */}
       </Layout>
 
     </>

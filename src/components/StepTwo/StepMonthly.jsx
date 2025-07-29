@@ -4,11 +4,11 @@ import { monthlyPlans } from "../../utils/data";
 const StepMonthly = () => {
 
   return (
-    <div>
-      <ul className="mt-10 flex flex-col gap-5">
+    <>
+      <ul className="mt-10 flex flex-col gap-5 md:flex-row">
         {
           monthlyPlans.map((plan, i) => (
-            <li key={i} className="flex gap-3 items-center border-2 border-blue-100 p-2 rounded-lg">
+            <li key={i} className="plan-list md:h-[10rem]">
               <img src={plan.icon} alt="icon-plan" />
               <div>
                 <p className="text-md text-Blue-950 font-Ubuntu-Bold">{plan.title}</p>
@@ -18,7 +18,7 @@ const StepMonthly = () => {
           ))
         }
       </ul>
-    </div>
+    </>
   )
 };
 

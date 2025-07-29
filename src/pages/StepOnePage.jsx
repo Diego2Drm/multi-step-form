@@ -25,7 +25,7 @@ const StepOnePage = () => {
         </form>
       </section>
 
-      <div className="bg-white absolute left-0 -bottom-36 w-full h-14 flex justify-end items-center pr-4 ">
+      <div className="bg-white absolute left-0 -bottom-36 w-full h-14 flex justify-end items-center pr-4 md:relative md:-bottom-6">
         <button className="bg-Blue-950 text-Blue-100 p-2 text-xs rounded-sm">
           Next Step
         </button>

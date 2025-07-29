@@ -16,7 +16,7 @@ const StepFourPage = () => {
 
       </section>
 
-      <div className="bg-white absolute left-0 -bottom-32 w-full h-14 flex justify-between items-center px-5">
+      <div className="bg-white absolute left-0 -bottom-32 w-full h-14 flex justify-between items-center px-5 md:relative md:-bottom-16">
         <p className="text-Grey-500 text-xs font-Ubuntu-Medium">Go Back</p>
         <button className="bg-Purple-600 text-Blue-100 py-2 px-5 text-xs rounded-sm">
           Confirm

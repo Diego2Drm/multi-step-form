@@ -36,7 +36,7 @@
 }
 
 .step-secction {
-  @apply bg-white mt-7 px-4 py-8 rounded-xl shadow-md
+  @apply bg-white mt-7 px-4 py-8 rounded-xl shadow-md md:shadow-none md:mt-0 md:bg-transparent
 }
 
 .step-secction-title {
@@ -44,21 +44,36 @@
 }
 
 .step-secction-text {
-  @apply text-Grey-500 font-Ubuntu-Regular text-sm w-3/4 mt-2
+  @apply text-Grey-500 font-Ubuntu-Regular text-sm w-3/4 mt-2 md:w-full
 }
 
 .form-label {
-  @apply flex flex-col gap-1
+  @apply flex flex-col gap-1 md:gap-3
 }
 
 .form-span {
-  @apply text-Blue-950 font-Ubuntu-Medium text-xs
+  @apply text-Blue-950 font-Ubuntu-Medium text-xs md:text-base
 }
 
 .form-input {
-  @apply border-2 border-Purple-200 p-1 rounded-md pl-3 placeholder:text-Grey-500 placeholder:text-sm placeholder:font-Ubuntu-Medium
+  @apply border-2 border-Purple-200 p-1 rounded-md pl-3 placeholder:text-Grey-500 placeholder:text-sm placeholder:font-Ubuntu-Medium md:p-2
 }
 
 .label-steptwo input:checked~span {
   @apply right-1 translate-x-5
+}
+
+/* Select Plan Step 2*/
+
+.plan-list {
+  @apply flex gap-3 items-center border-2 border-blue-100 p-2 rounded-lg md:flex-col md:gap-12 md:items-start md:w-[10rem] md:p-3.5
+}
+
+/* Design  Desktop*/
+.layout-desktop {
+  @apply md:bg-white md:rounded-xl md:-z-0 md:p-5 lg:w-[50rem] md:my-20 md:mx-auto md:flex md:shadow-2xl md:h-[35rem]
+}
+
+.navList-desktop {
+  @apply md:flex-col md:pl-3 md:pt-8
 }

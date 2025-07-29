@@ -7,10 +7,10 @@ const StepYeraly = () => {
 
   return (
     <div>
-      <ul className="mt-10 flex flex-col gap-5">
+      <ul className="mt-10 flex flex-col gap-5 md:flex-row md:mt-8">
         {
           yearlyPlans.map((plan, i) => (
-            <li key={i} className="flex gap-3 items-center border-2 border-blue-100 p-2 rounded-lg">
+            <li key={i} className="plan-list md:h-[11rem]">
               <img src={plan.icon} alt="icon-plan" />
               <div>
                 <p className="text-md text-Blue-950 font-Ubuntu-Bold">{plan.title}</p>

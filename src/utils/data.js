@@ -3,10 +3,10 @@ import iconAdvanced from "../assets/images/icon-advanced.svg"
 import iconPro from "../assets/images/icon-pro.svg"
 
 export const steps = [
-  { to: "/step-one", step: 1, },
-  { to: "/step-two", step: 2, },
-  { to: "/step-three", step: 3, },
-  { to: "/step-four", step: 4, },
+  { to: "/step-one", step: 1, titleStep: "step 1", info: "Your info", },
+  { to: "/step-two", step: 2, titleStep: "step 2", info: "Select plan", },
+  { to: "/step-three", step: 3, titleStep: "step 3", info: "Add-ons", },
+  { to: "/step-four", step: 4, titleStep: "step 4", info: "Summary", },
 ]
 
 export const formData = [
