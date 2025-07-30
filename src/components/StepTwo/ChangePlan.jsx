@@ -1,6 +1,17 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const ChengePlan = ({plan, setPlan}) => {
+const ChangePlan = ({ plan, setPlan, slug }) => {
+  const navigate = useNavigate();
+
+  const handleChangePlan = (e) => {
+    const isYearly = e.target.checked;
+    if (isYearly) {
+      navigate("/step-two/yearly")
+    } else {
+      navigate("/step-two/monthly")
+    }
+  }
 
   return (
     <div className="bg-Blue-100 my-5 rounded-lg flex justify-center items-center p-2 gap-5">
@@ -8,7 +19,7 @@ const ChengePlan = ({plan, setPlan}) => {
 
       <label className="rounded-3xl w-10 h-5 relative flex items-center justify-center bg-Blue-950 label-steptwo">
         <input type="checkbox"
-          onChange={(e) => setPlan(e.target.checked)}
+          onChange={handleChangePlan}
           defaultChecked={plan}
           className="appearance-none"
         />
@@ -21,4 +32,4 @@ const ChengePlan = ({plan, setPlan}) => {
   )
 };
 
-export { ChengePlan };
+export { ChangePlan };

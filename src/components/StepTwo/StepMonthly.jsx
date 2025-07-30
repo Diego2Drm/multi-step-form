@@ -1,23 +1,37 @@
-import React from "react";
+import React, { useContext } from "react";
 import { monthlyPlans } from "../../utils/data";
+import { Context } from "../../context/MyContext";
+import { Link } from "react-router-dom";
 
 const StepMonthly = () => {
+  const { inputChecked, handleRadioMonthly } = useContext(Context);
 
   return (
     <>
-      <ul className="mt-10 flex flex-col gap-5 md:flex-row">
+      <div className="mt-10 flex flex-col gap-5 md:flex-row">
         {
           monthlyPlans.map((plan, i) => (
-            <li key={i} className="plan-list md:h-[10rem]">
+            <label key={i} className={`plan-list md:h-[10rem] cursor-pointer hover:outline-2 hover:outline-Purple-600
+            ${inputChecked === plan.title ? "outline-2 outline-Purple-600 bg-Blue-100" : ""}
+            `}
+              onClick={() => handleRadioMonthly(plan.title, plan.price)}
+            >
               <img src={plan.icon} alt="icon-plan" />
               <div>
                 <p className="text-md text-Blue-950 font-Ubuntu-Bold">{plan.title}</p>
                 <p className="text-xs text-Grey-500 font-Ubuntu-Regular">{plan.price}</p>
               </div>
-            </li>
+              {/* <input type="checkbox" name="" id="" className="opacity-0" /> */}
+            </label>
           ))
         }
-      </ul>
+        <div className="bg-white absolute left-0 bottom-0 w-full h-14 flex justify-between items-center px-5 md:relative md:bottom-10">
+          <Link to="/" className="text-Grey-500 text-xs font-Ubuntu-Medium">Go Back</Link>
+          <Link to="/step-three/monthly" className="bg-Blue-950 text-Blue-100 p-2 text-xs rounded-sm">
+            Next Step
+          </Link>
+        </div>
+      </div>
     </>
   )
 };

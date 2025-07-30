@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import { yearlyPlans } from "../../utils/data";
+import { Link } from "react-router-dom";
+import { Context } from "../../context/MyContext";
 
 
 const StepYeraly = () => {
-  
+  const { inputCheckedYearly, handleRadioYearly } = useContext(Context);
 
   return (
     <div>
       <ul className="mt-10 flex flex-col gap-5 md:flex-row md:mt-8">
         {
           yearlyPlans.map((plan, i) => (
-            <li key={i} className="plan-list md:h-[11rem]">
+            <li key={i} className={`plan-list md:h-[11rem]
+            cursor-pointer hover:outline-2 hover:outline-Purple-600
+            ${inputCheckedYearly === plan.title ? "outline-2 outline-Purple-600 bg-Blue-100" : ""}`}
+              onClick={() => handleRadioYearly(plan.title, plan.price)}
+            >
               <img src={plan.icon} alt="icon-plan" />
               <div>
                 <p className="text-md text-Blue-950 font-Ubuntu-Bold">{plan.title}</p>
@@ -21,6 +27,13 @@ const StepYeraly = () => {
           ))
         }
       </ul>
+
+      <div className="bg-white absolute left-0 bottom-0 w-full h-14 flex justify-between items-center px-5 md:relative md:bottom-10">
+        <Link to="/" className="text-Grey-500 text-xs font-Ubuntu-Medium">Go Back</Link>
+        <Link to="/step-three/yearly" className="bg-Blue-950 text-Blue-100 p-2 text-xs rounded-sm">
+          Next Step
+        </Link>
+      </div>
     </div>
   )
 };

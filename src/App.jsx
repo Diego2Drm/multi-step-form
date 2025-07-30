@@ -14,7 +14,7 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<StepOnePage />} />
-          <Route path="/step-two" element={<StepTwoPage />} />
+          <Route path="/step-two/:slug" element={<StepTwoPage />} />
           <Route path="/step-three" element={<StepThreePage />} />
           <Route path="/step-four" element={<StepFourPage />} />
           <Route path="/step-five" element={<StepFivePage />} />

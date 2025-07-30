@@ -10,7 +10,7 @@ const StepOnePage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/step-two")
+    navigate("/step-two/monthly")
   }
 
   return (

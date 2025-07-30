@@ -1,34 +1,28 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { StepMonthly } from "../components/StepTwo/StepMonthly";
 import { StepYeraly } from "../components/StepTwo/StepYearly";
-import { ChengePlan } from "../components/StepTwo/ChangePlan";
+import { ChangePlan } from "../components/StepTwo/ChangePlan";
 
 const StepTwoPage = () => {
+  const { slug } = useParams()
+  
   const [plan, setPlan] = useState(false);
 
   return (
     <>
       <section className="step-secction mb-16">
         <h1 className="step-secction-title">Select your plan</h1>
-        <p className="step-secction-text">Ypu have the option of monthly or yearly billing.</p>
+        <p className="step-secction-text">You have the option of monthly or yearly billing.</p>
 
         {
-          plan ?
-            <StepYeraly /> :
-            <StepMonthly />
+          slug === "monthly" ?
+            <StepMonthly /> :
+            <StepYeraly />
         }
 
-        <ChengePlan plan={plan} setPlan={setPlan} />
-
+        <ChangePlan plan={plan} setPlan={setPlan} slug={slug} />
       </section >
-
-      <div className="bg-white absolute left-0 bottom-0 w-full h-14 flex justify-between items-center px-5 md:relative md:bottom-10">
-        <Link to="/" className="text-Grey-500 text-xs font-Ubuntu-Medium">Go Back</Link>
-        <Link to="/step-three" className="bg-Blue-950 text-Blue-100 p-2 text-xs rounded-sm">
-          Next Step
-        </Link>
-      </div>
     </>
   )
 };
