@@ -13,6 +13,7 @@ export const formData = [
   {
     htmlFor: "name",
     span: "Name",
+    name: "name",
     type: "text",
     placeholder: "e.g. Stephen King",
     id: "name"
@@ -20,6 +21,7 @@ export const formData = [
   {
     htmlFor: "email",
     span: "Email Address",
+    name: "email",
     type: "email",
     placeholder: "e.g. stephenking@lorem.com",
     id: "email"
@@ -27,7 +29,8 @@ export const formData = [
   {
     htmlFor: "number",
     span: "Phone Number",
-    type: "text",
+    name: "phone",
+    type: "number",
     placeholder: "e.g. +1234567890",
     id: "number"
   },

@@ -1,9 +1,17 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { formData } from "../utils/data";
-import { Button } from "../utils/Button";
+import { Context } from "../context/MyContext";
+// import { Button } from "../utils/Button";
 
 const StepOnePage = () => {
+  const navigate = useNavigate();
+  const { inputs, handleChange } = useContext(Context);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate("/step-two")
+  }
 
   return (
     <>
@@ -14,12 +22,23 @@ const StepOnePage = () => {
           Please provide your name, email. address, and phone number.
         </p>
 
-        <form className="mt-5 flex flex-col gap-3">
+        <form id="useForm"
+          className="mt-5 flex flex-col gap-3"
+          onSubmit={handleSubmit}>
           {
             formData.map((data, i) => (
               <label key={i} htmlFor={data.htmlFor} className="form-label">
                 <span className="form-span">{data.span}</span>
-                <input className="form-input" type={data.type} id={data.id} placeholder={data.placeholder} />
+                <input
+                  className="form-input"
+                  type={data.type}
+                  name={data.name}
+                  id={data.id}
+                  placeholder={data.placeholder}
+                  value={inputs[data.name] || ""}
+                  onChange={handleChange}
+                  required
+                />
               </label>
             ))
           }
@@ -27,9 +46,9 @@ const StepOnePage = () => {
       </section>
 
       <div className="bg-white absolute left-0 -bottom-36 w-full h-14 flex justify-end items-center pr-4 md:relative md:-bottom-6">
-        <Link to="/step-two" className="bg-Blue-950 text-Blue-100 p-2 text-xs rounded-sm">
-          Next Step
-        </Link>
+        <div to="/step-two" className="bg-Blue-950 text-Blue-100 p-2 text-xs rounded-sm">
+          <button type="submit" form="useForm">Next Step</button>
+        </div>
       </div>
 
     </>
