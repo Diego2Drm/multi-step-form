@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { addOnsMonthly } from "../../utils/data";
+import { Context } from "../../context/MyContext";
 
 const StepThreeMonthly = () => {
-
+  const { handleAddOnsMonthly } = useContext(Context);
 
   return (
     <div>
@@ -12,10 +13,14 @@ const StepThreeMonthly = () => {
         {
           addOnsMonthly.map((item, i) => (
             <label key={i}
-              className="flex gap-6 justify-between items-center border-2 border-blue-100 p-2 px-3 rounded-lg"
+              className="flex gap-6 justify-between items-center border-2 border-blue-100 p-2 px-3 rounded-lg
+              has-checked:outline-2 has-checked:outline-Purple-600 has-checked:bg-Blue-100 hover:outline-2 hover:outline-Purple-600
+              "
+              
             >
               <input type="checkbox" style={{ width: "2rem" }}
                 className="w-5 h-5 inputStepThree"
+                onChange={() => handleAddOnsMonthly(item.title, item.price)}
               />
 
               <div className="w-full">
