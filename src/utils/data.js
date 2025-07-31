@@ -40,17 +40,17 @@ export const monthlyPlans = [
   {
     icon: iconArcade,
     title: "Arcade",
-    price: "$9/mo"
+    price: 9
   },
   {
     icon: iconAdvanced,
     title: "Advanced",
-    price: "$12/mo"
+    price: 12
   },
   {
     icon: iconPro,
     title: "Pro",
-    price: "$15/mo"
+    price: 15
   },
 ]
 

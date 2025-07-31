@@ -44,19 +44,19 @@ const ContextProvider = ({ children }) => {
   // --->
 
   // Step-Three
-  const [addOnsMontly, setAddOnsMontly] = useState([]);
+  const [addOnsMonthly, setAddOnsMonthly] = useState([]);
   const [addOnsYearly, setAddOnsYearly] = useState([]);
 
   const handleAddOnsMonthly = (title, price) => {
 
-    const isSelected = addOnsMontly.some(item => item.title === title);
+    const isSelected = addOnsMonthly.some(item => item.title === title);
 
     if (isSelected) {
       // ❌ Si ya existe, lo removemos (toggle OFF)
-      setAddOnsMontly(prev => prev.filter(item => item.title !== title));
-    } else if (addOnsMontly.length < 3) {
+      setAddOnsMonthly(prev => prev.filter(item => item.title !== title));
+    } else if (addOnsMonthly.length < 3) {
       // ✅ Si no existe y hay espacio, lo agregamos
-      setAddOnsMontly(prev => [...prev, { title, price }]);
+      setAddOnsMonthly(prev => [...prev, { title, price }]);
     } else {
       // 🚫 Si hay 3 elementos, no agregamos más (puedes mostrar alerta si quieres)
       console.log("Solo puedes seleccionar hasta 3 complementos.");
@@ -66,14 +66,14 @@ const ContextProvider = ({ children }) => {
   const handleAddOnsYearly = (title, price) => {
     const isSelected = addOnsYearly.some(item => item.title === title);
 
-    if(isSelected){
+    if (isSelected) {
       setAddOnsYearly(prev => prev.filter(item => item.title !== title));
     } else {
-      setAddOnsYearly(prev => [...prev, {title, price}]);
+      setAddOnsYearly(prev => [...prev, { title, price }]);
     }
   }
 
-  // --->
+  // --->  
 
   const value = {
     inputs,
@@ -84,6 +84,10 @@ const ContextProvider = ({ children }) => {
     handleRadioYearly,
     handleAddOnsMonthly,
     handleAddOnsYearly,
+    setAddOnsMonthly,
+    inputRadioMonthly,
+    addOnsMonthly,
+    addOnsYearly,
   }
 
   return (

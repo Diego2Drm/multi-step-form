@@ -19,7 +19,9 @@ const StepMonthly = () => {
               <img src={plan.icon} alt="icon-plan" />
               <div>
                 <p className="text-md text-Blue-950 font-Ubuntu-Bold">{plan.title}</p>
-                <p className="text-xs text-Grey-500 font-Ubuntu-Regular">{plan.price}</p>
+                <p className="text-xs text-Grey-500 font-Ubuntu-Regular">
+                  ${plan.price}/mo
+                </p>
               </div>
               {/* <input type="checkbox" name="" id="" className="opacity-0" /> */}
             </label>
