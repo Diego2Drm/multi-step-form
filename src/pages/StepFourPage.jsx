@@ -7,10 +7,11 @@ import { Context } from "../context/MyContext";
 const StepFourPage = () => {
   const { slug } = useParams();
   const navigate = useNavigate()
-  const { setAddOnsMonthly } = useContext(Context);
+  const { setAddOnsMonthly, setAddOnsYearly } = useContext(Context);
 
   const handleNavigate = () => {
     setAddOnsMonthly([]);
+    setAddOnsYearly([]);
     navigate(`/step-three/${slug}`)
   }
 

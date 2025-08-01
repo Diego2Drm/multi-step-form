@@ -58,17 +58,17 @@ export const yearlyPlans = [
   {
     icon: iconArcade,
     title: "Arcade",
-    price: "$90/yr"
+    price: 90
   },
   {
     icon: iconAdvanced,
     title: "Advanced",
-    price: "$120/yr"
+    price: 120
   },
   {
     icon: iconPro,
     title: "Pro",
-    price: "$150/yr"
+    price: 150
   },
 ]
 
