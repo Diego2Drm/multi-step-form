@@ -28,7 +28,7 @@ const StepMonthly = () => {
           ))
         }
         <div className="bg-white absolute left-0 bottom-0 w-full h-14 flex justify-between items-center px-5 md:-bottom-48">
-          <Link to="/" className="text-Grey-500 text-xs font-Ubuntu-Medium">Go Back</Link>
+          <Link to="/" className="text-Grey-500 text-xs font-Ubuntu-Medium hover:text-Blue-950 hover:scale-105">Go Back</Link>
           <Link to="/step-three/monthly" className="bg-Blue-950 text-Blue-100 p-2 text-xs rounded-sm">
             Next Step
           </Link>

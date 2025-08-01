@@ -56,7 +56,7 @@
 }
 
 .form-input {
-  @apply border-2 border-Purple-200 p-1 rounded-md pl-3 placeholder:text-Grey-500 placeholder:text-sm placeholder:font-Ubuntu-Medium md:p-2
+  @apply border-2 border-Purple-200 p-1 rounded-md pl-3 placeholder:text-Grey-500 placeholder:text-sm placeholder:font-Ubuntu-Medium md:p-2 cursor-pointer hover:outline-2 hover:outline-Purple-600 focus:outline-Purple-600
 }
 
 .label-steptwo input:checked~span {

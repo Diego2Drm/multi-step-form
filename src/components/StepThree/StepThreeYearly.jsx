@@ -14,7 +14,7 @@ const StepThreeYearly = () => {
             addOnsYearly.map((item, i) => (
             <label key={i}
               className="flex gap-6 justify-between items-center border-2 border-blue-100 p-2 px-3 rounded-lg
-              has-checked:outline-2 has-checked:outline-Purple-600 has-checked:bg-Blue-100 hover:outline-2 hover:outline-Purple-600
+              has-checked:outline-2 has-checked:outline-Purple-600 has-checked:bg-Blue-100 hover:outline-2 hover:outline-Purple-600 cursor-pointer
               "
             >
               <input type="checkbox" style={{ width: "2rem" }}

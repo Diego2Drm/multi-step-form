@@ -31,9 +31,9 @@ const StepFourPage = () => {
 
       </section>
 
-      <div className="bg-white absolute left-0 -bottom-32 w-full h-14 flex justify-between items-center px-5 md:relative md:-bottom-16 ">
-        <button onClick={handleNavigate} className="text-Grey-500 text-xs font-Ubuntu-Medium">Go Back</button>
-        <Link to="/step-five" className="bg-Purple-600 text-Blue-100 py-2 px-5 text-xs rounded-sm">
+      <div className="bg-white absolute left-0 -bottom-32 w-full h-14 flex justify-between items-center px-5 md:relative md:-bottom-12 ">
+        <button onClick={handleNavigate} className="text-Grey-500 text-xs font-Ubuntu-Medium hover:text-Blue-950 hover:scale-105 cursor-pointer">Go Back</button>
+        <Link to="/step-five" className="bg-Purple-600 text-Blue-100 py-2 px-5 text-xs rounded-sm hover:opacity-50">
           Confirm
         </Link>
       </div>

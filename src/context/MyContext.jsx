@@ -90,6 +90,12 @@ const ContextProvider = ({ children }) => {
     setAddOnsYearly,
     inputRadioYearly,
     addOnsYearly,
+    setInputs,
+    setInputChecked,
+    setInputCheckedYearly,
+    setInputRadioMonthly,
+    setInputRadioYearly,
+    setAddOnsMonthly,
   }
 
   return (
