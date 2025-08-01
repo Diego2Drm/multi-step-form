@@ -1,13 +1,13 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { FinishingMonthly } from "../components/StepFour/FinishingMonthly";
 import { FinishingYearly } from "../components/StepFour/FinishingYearly";
-import { Context } from "../context/MyContext";
+import { useMyContext } from "../hooks/useMyContext";
 
 const StepFourPage = () => {
   const { slug } = useParams();
   const navigate = useNavigate()
-  const { setAddOnsMonthly, setAddOnsYearly } = useContext(Context);
+  const { setAddOnsMonthly, setAddOnsYearly } = useMyContext();
 
   const handleNavigate = () => {
     setAddOnsMonthly([]);

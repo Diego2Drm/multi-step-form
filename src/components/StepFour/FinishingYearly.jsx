@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
-import { Context } from "../../context/MyContext";
-import { Link, useNavigate } from "react-router-dom";
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useMyContext } from "../../hooks/useMyContext";
 
 const FinishingYearly = () => {
   const navigate = useNavigate();
-  const { inputRadioYearly, addOnsYearly,setAddOnsYearly } = useContext(Context);
+  const { inputRadioYearly, addOnsYearly, setAddOnsYearly } = useMyContext();
   const totalInputRadioYearly = inputRadioYearly?.price;
   const totalAddOnsYearly = addOnsYearly.reduce((cur, item) => cur + item.price, 0);
   const total = totalInputRadioYearly + totalAddOnsYearly;

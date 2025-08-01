@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import iconThankYou from "../assets/images/icon-thank-you.svg"
-import { Context } from "../context/MyContext";
+import { useMyContext } from "../hooks/useMyContext";
 
 const StepFivePage = () => {
   const {
@@ -12,7 +12,7 @@ const StepFivePage = () => {
     setInputRadioYearly,
     setAddOnsMonthly,
     setAddOnsYearly
-  } = useContext(Context);
+  } = useMyContext();
 
   const navigate = useNavigate();
   const handleInitialStates = () => {

@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import { monthlyPlans } from "../../utils/data";
-import { Context } from "../../context/MyContext";
 import { Link } from "react-router-dom";
+import { useMyContext } from "../../hooks/useMyContext";
 
 const StepMonthly = () => {
-  const { inputChecked, handleRadioMonthly } = useContext(Context);
+  const { inputChecked, handleRadioMonthly } = useMyContext();
 
   return (
     <>

@@ -1,13 +1,18 @@
-import React, { useContext } from "react";
-import { Context } from "../../context/MyContext";
-import { Link } from "react-router-dom";
+import React from "react";
+import { useMyContext } from "../../hooks/useMyContext";
+import { useNavigate } from "react-router-dom";
 
 const FinishingMonthly = () => {
-  const { inputRadioMonthly, addOnsMonthly } = useContext(Context);
+  const { inputRadioMonthly, addOnsMonthly, setAddOnsMonthly } = useMyContext();
+  const navigate = useNavigate();
   const totalInputRadioMonthly = inputRadioMonthly?.price
   const totalAddOnsMonthly = addOnsMonthly.reduce((acc, item) => acc + Number(item.price), 0)
   const total = totalInputRadioMonthly + totalAddOnsMonthly;
 
+  const handleEmpty = () => {
+    setAddOnsMonthly([]);
+    navigate('/step-two/monthly');
+  }
 
   return (
     <div className="mt-6">
@@ -15,9 +20,9 @@ const FinishingMonthly = () => {
         {
           inputRadioMonthly?.title && (
             <div className="flex justify-between items-center border-b-2 border-gray-200 pb-2">
-              <p className="flex flex-col">
+              <p className="flex flex-col items-start">
                 <span className="font-Ubuntu-Bold text-sm">{inputRadioMonthly.title} (Monthly)</span>
-                <Link to={'/step-two/monthly'} className="text-Grey-500 text-xs underline">Change</Link>
+                <button onClick={handleEmpty} className="text-Grey-500 text-xs underline">Change</button>
               </p>
               <span className="font-Ubuntu-Bold text-Blue-950 text-sm">${inputRadioMonthly.price}/mo</span>
             </div>

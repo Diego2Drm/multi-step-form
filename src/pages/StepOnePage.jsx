@@ -1,12 +1,12 @@
-import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React from "react";
+import {  useNavigate } from "react-router-dom";
 import { formData } from "../utils/data";
-import { Context } from "../context/MyContext";
+import { useMyContext } from "../hooks/useMyContext";
 // import { Button } from "../utils/Button";
 
 const StepOnePage = () => {
   const navigate = useNavigate();
-  const { inputs, handleChange } = useContext(Context);
+  const { inputs, handleChange } = useMyContext();
 
   const handleSubmit = (e) => {
     e.preventDefault();

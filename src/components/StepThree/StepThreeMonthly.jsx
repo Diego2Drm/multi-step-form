@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import { addOnsMonthly } from "../../utils/data";
-import { Context } from "../../context/MyContext";
+import { useMyContext } from "../../hooks/useMyContext";
 
 const StepThreeMonthly = () => {
-  const { handleAddOnsMonthly } = useContext(Context);
+  const { handleAddOnsMonthly } = useMyContext()
 
   return (
     <div>
