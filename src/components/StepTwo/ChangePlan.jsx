@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const ChangePlan = ({ plan, setPlan, slug }) => {
+const ChangePlan = ({ plan }) => {
   const navigate = useNavigate();
 
   const handleChangePlan = (e) => {
